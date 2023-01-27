@@ -8,38 +8,45 @@
     
     "AZA": {
         "Description": "This is for Availability Zone A",
-        "Type": "AWS::EC2::AvailabilityZone::Name"
+        "Type": "AWS::EC2::AvailabilityZone::Name",
+        "Default": "us-east-1a"
 
     },
     "AZB": {
       "Description": "This is for Availability Zone B",
-      "Type": "AWS::EC2::AvailabilityZone::Name"
+      "Type": "AWS::EC2::AvailabilityZone::Name",
+      "Default": "us-east-1b"
     
     },
     
     "PubSub1CIDR": {
         "Description": "CIDR block for public subnet 1",
-        "Type": "String"
+        "Type": "String",
+        "Default": "10.0.1.0/24"
         
     },
     
     "PubSub2CIDR": {
         "Description": "CIDR block for public subnet 2",
-        "Type": "String"
+        "Type": "String",
+        "Default": "10.0.2.0/24"
         
     },
     "PrtSub1CIDR": {
       "Description": "CIDR block for private subnet 1",
-      "Type": "String"
+      "Type": "String",
+      "Default": "10.0.3.0/24"
     
     },
     "PrtSub2CIDR": {
       "Description": "CIDR block for private subnet 2",
-      "Type": "String"
+      "Type": "String",
+      "Default": "10.0.4.0/24"
     },
     "VPCCIDR": {
       "Description": "CIDR block for VPC",
-      "Type": "String"
+      "Type": "String",
+      "Default": "10.0.0.0/16"
     }
   },
     "Mappings": {
@@ -109,8 +116,7 @@
     "MapPublicIpOnLaunch": "true",
     "AvailabilityZone": { "Ref": "AZA" },
     "VpcId": {"Ref": "DevVpc" },
-    "CidrBlock": { "Ref": "PubSub1CIDR" }
-    ,
+    "CidrBlock": { "Ref": "PubSub1CIDR" },
     "Tags": [ { "Key": "name", "Value":  "DevVpcPubSub1" }]
   }
 },
