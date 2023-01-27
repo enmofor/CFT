@@ -1,6 +1,6 @@
 {
 "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "This is to create a VPC",
+    "Description": "This is to create a VPC and other components",
     "Metadata": {
 
     },
